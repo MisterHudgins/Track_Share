@@ -10,9 +10,15 @@ app.use(bodyParser.json())
 app.use(cors())
 
 // used to test the backend
-app.get('/status', (req, res) => {
+// app.get('/status', (req, res) => {
+//     res.send({
+//         message: 'hello world'
+//     })
+// })
+
+app.post('/register', (req, res) => {
     res.send({
-        message: 'hello world'
+        message: `${req.body.email} Your user was registered`
     })
 })
 
